@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqw4vcwqoii7r"]
+
+[ext_resource type="Texture2D" uid="uid://degh2ur7tjuts" path="res://assets/startScreen.png" id="1_gn1gh"]
+[ext_resource type="FontFile" uid="uid://8nseitfoa3bh" path="res://fonts/cat_font.ttf" id="2_nipcs"]
+
+[node name="StartScreen" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.599445)
+texture = ExtResource("1_gn1gh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_top = 218.0
+offset_right = 1152.0
+offset_bottom = 411.0
+theme_override_fonts/font = ExtResource("2_nipcs")
+theme_override_font_sizes/font_size = 120
+text = "CatQuest"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="StartGameButton" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 448.0
+offset_right = 448.0
+offset_bottom = 512.0
+text = "Play"
+
+[node name="TutorialButton" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 448.0
+offset_right = 896.0
+offset_bottom = 513.0
+text = "Tutorial"

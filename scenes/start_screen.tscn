@@ -1,40 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqw4vcwqoii7r"]
+[gd_scene load_steps=7 format=3 uid="uid://dqw4vcwqoii7r"]
 
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_c4kja"]
 [ext_resource type="Texture2D" uid="uid://degh2ur7tjuts" path="res://assets/startScreen.png" id="1_gn1gh"]
 [ext_resource type="FontFile" uid="uid://8nseitfoa3bh" path="res://fonts/cat_font.ttf" id="2_nipcs"]
+[ext_resource type="Texture2D" uid="uid://br36f4h3iygu1" path="res://assets/ButtonIcon.png" id="4_wbben"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ndf6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1ssm"]
 
 [node name="StartScreen" type="Node"]
+script = ExtResource("1_c4kja")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(576, 324)
-scale = Vector2(0.6, 0.599445)
+position = Vector2(960, 540)
 texture = ExtResource("1_gn1gh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_top = 218.0
-offset_right = 1152.0
-offset_bottom = 411.0
+offset_top = 320.0
+offset_right = 1920.0
+offset_bottom = 641.0
 theme_override_fonts/font = ExtResource("2_nipcs")
-theme_override_font_sizes/font_size = 120
+theme_override_font_sizes/font_size = 200
 text = "CatQuest"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="StartGameButton" type="Button" parent="."]
-offset_left = 256.0
-offset_top = 448.0
-offset_right = 448.0
-offset_bottom = 512.0
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 776.0
+offset_right = 704.0
+offset_bottom = 888.0
+theme_override_colors/icon_normal_color = Color(0, 0, 0.988235, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.952941, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 1, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ndf6")
+keep_pressed_outside = true
 text = "Play"
+icon = ExtResource("4_wbben")
+icon_alignment = 1
+expand_icon = true
 
 [node name="TutorialButton" type="Button" parent="."]
-offset_left = 704.0
-offset_top = 448.0
-offset_right = 896.0
-offset_bottom = 513.0
+offset_left = 1216.0
+offset_top = 776.0
+offset_right = 1472.0
+offset_bottom = 888.0
+theme_override_colors/icon_normal_color = Color(0.827451, 0.615686, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.654902, 0.482353, 0.458824, 1)
+theme_override_colors/icon_focus_color = Color(0.827451, 0.615686, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y1ssm")
 text = "Tutorial"
+icon = ExtResource("4_wbben")
+icon_alignment = 1
+expand_icon = true
